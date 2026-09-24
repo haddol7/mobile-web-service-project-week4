@@ -8,14 +8,14 @@ Python 소켓 서버는 HTTP 요청 전체를 이진 파일로 저장하고, 이
 
 ```text
 Socket server listening on 127.0.0.1:8000
-Saved raw request: result/2026-09-24-18-05-06.bin
-Saved image: result/2026-09-24-18-05-06-image.png
+Saved raw request: request/2026-09-24-18-05-06.bin
+Saved image: request/2026-09-24-18-05-06-image.png
 Saved 2026-09-24-18-05-06.bin; extracted 1 image(s)
 ```
 
 ## 원본 HTTP 요청
 
-- 파일: `result/2026-09-24-18-05-06.bin`
+- 파일: `request/2026-09-24-18-05-06.bin`
 - 요청: `POST /api_root/Post/ HTTP/1.1`
 - 형식: `multipart/form-data`
 - 포함 필드: `author`, `title`, `text`, `created_date`, `published_date`, `image`
@@ -23,7 +23,7 @@ Saved 2026-09-24-18-05-06.bin; extracted 1 image(s)
 
 ## 추출 이미지
 
-![multipart에서 추출한 이미지](result/2026-09-24-18-05-06-image.png)
+![multipart에서 추출한 이미지](request/2026-09-24-18-05-06-image.png)
 
 원본 이미지와 추출 이미지의 SHA-256 해시가 일치하므로 이미지 데이터가
 손상 없이 분리되었음을 확인했다.

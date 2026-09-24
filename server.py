@@ -17,7 +17,7 @@ HEADER_SEPARATOR = b"\r\n\r\n"
 
 
 class SocketServer:
-    def __init__(self, output_dir: str | Path = "result") -> None:
+    def __init__(self, output_dir: str | Path = "request") -> None:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -153,7 +153,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8000)
-    parser.add_argument("--output-dir", default="result")
+    parser.add_argument("--output-dir", default="request")
     parser.add_argument(
         "--once", action="store_true", help="Handle one request and then stop"
     )
